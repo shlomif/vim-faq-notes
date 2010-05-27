@@ -1,0 +1,38 @@
+* Errata: question 3.1 - What is the latest version of vim is out of date.
+
+* You can press the CTRL-D key after typing the help keyword to get a list of
+all the help keywords containing the supplied pattern.
+
+From the help window, you can use the ":tag" command to search for
+keywords. For example,
+
+    :tselect /window
+
+You can use the ":helpgrep" command to search for the given text in all the
+help files. The quickfix window will be opened with all the matching lines.
+
+							*:file_f*
+:f[ile][!] {name}	Sets the current file name to {name}.  The optional !
+			avoids truncating the message, as with |:file|.
+			If the buffer did have a name, that name becomes the
+			|alternate-file| name.  An unlisted buffer is created
+			to hold the old name.
+
+5.3. How do I change the current directory to the directory of the current
+     file?
+
+You can use the following command to change the current directory to the
+directory of the current file:
+
+    :cd %:p:h
+    
+------------------------------------------------------------
+
+5.7. How do I edit a file whose name is under the cursor?
+
+You can use the gf command to edit a file whose name is under the cursor.
+You can use the CTRL-W f command to edit the file in a new window.
+
+------------------------------------------------------------
+
+
