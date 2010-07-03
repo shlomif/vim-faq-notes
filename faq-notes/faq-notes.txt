@@ -35,4 +35,128 @@ You can use the CTRL-W f command to edit the file in a new window.
 
 ------------------------------------------------------------
 
+5.10. How do I open a file in read-only mode?
+
+You can open a file in read-only mode using the ":view" command:
+
+    :view <filename>
+
+This command sets the 'readonly' option for the opened buffer. You can also
+use the "-R" command-line option to open a file in read-only mode:
+
+    $ vim -R <filename>
+
+You can also use the symbolic link "view" to open a file in read-only mode:
+
+    $ view <filename>
+
+For more information, read
+
+    :help 07.6
+    :help 'readonly'
+    :help 'modifiable'
+    :help :view
+    :help :sview
+    :help view
+    :help -R
+    :help -M
+
+------------------------------------------------------------
+
+6.1. How do I switch between files while editing multiple files in Vim?
+
+There are several ways to switch between multiple files. You can use the
+":buffer" command to switch between multiple files. For example,
+
+    :buffer file1
+    :buffer file2
+
+You can also use the CTRL-^ key to switch between buffers. By specifying a
+count before pressing the key, you can edit the buffer with that number.
+Without the count, you can edit the alternate buffer by pressing CTRL-^
+
+You can also use the ":e #" command to edit a particular buffer:
+
+    :e #5
+
+For more information, read
+
+    :help edit-files
+    :help :buffer
+    :help CTRL-^
+    :help alternate-file
+    :help 22.4
+    :help 07.3
+
+------------------------------------------------------------
+
+6.4. How do I open multiple files at once from within Vim?
+
+There are several ways to open multiple files at once from within Vim. You
+can use the ":next" command to specify a group of files:
+
+    :next f1.txt f2.txt
+    :next *.c
+
+You can use the :args command to specify a group of files as argument:
+
+    :args f1.txt f2.txt
+    :args *.c
+
+After loading the files, you can use the ":next" and ":prev" command to
+switch between the files.
+
+For more information, read
+
+    :help 07.2
+    :help :next
+    :help :args_f
+    :help argument-list
+
+------------------------------------------------------------
+
+8.1. I have made some modifications to a buffer. How do I edit another
+     buffer without saving the modified buffer and also without losing the
+     modifications?
+
+You can set the 'hidden' option to edit a file without losing modifications
+to the current file:
+
+    :set hidden
+
+By setting the 'hidden' option, you can also save the modification history
+(undo-history) for the buffer. Otherwise, as you switch between files, the
+undo-history will be lost.
+
+For more information, read
+
+    :help 'hidden'
+    :help hidden-quit
+    :help :hide
+
+------------------------------------------------------------
+
+8.3. How do I replace the buffer in the current window with a blank buffer?
+
+You can use the ":enew" command to load an empty buffer in place of the
+buffer in the current window.
+
+For more information, read
+
+    :help :enew
+
+------------------------------------------------------------
+
+8.5. How do I open all the current buffers in separate windows?
+
+You can use the ":ball" or ":sball" commands to open all the buffers
+in the buffer list:
+
+    :ball
+
+For more information, read
+
+    :help :ball
+
+
 
