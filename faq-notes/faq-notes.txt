@@ -158,5 +158,24 @@ For more information, read
 
     :help :ball
 
+------------------------------------------------------------
+
+9.3. How do I zoom into or out of a window?
+
+You can zoom into a window (close all the windows except the current
+window) using the "CTRL-W o" command or the ":only" ex command.
+
+You can use the "CTRL-W _" command or the ":resize" ex command to increase
+the current window height to the highest possible without closing other
+windows.
+
+You can use the "CTRL-W |" command or the ":vertical resize" ex command to
+increase the current window width to the highest possible without closing
+other windows.
+
+You can use the "CTRL-W =" command to make the height and width of all the
+windows equal.
+
+------------------------------------------------------------
 
 
