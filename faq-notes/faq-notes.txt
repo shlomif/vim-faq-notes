@@ -178,4 +178,28 @@ windows equal.
 
 ------------------------------------------------------------
 
+10.8. How do I scroll two or more buffers simultaneously?
 
+You can set the "scrollbind" option for each of the buffer to scroll them
+simultaneously.
+
+For more information, read
+
+    :help 'scrollbind'
+    :help scroll-binding
+    :help 'scrollopt'
+
+------------------------------------------------------------
+
+10.13. How do I go back to previous cursor locations?
+
+You can go back to the cursor location before the latest jump using the ''
+or `` command. You can use the CTRL-O command to go back to older cursor
+positions and the CTRL-I command to go to the newer cursor positions in the
+jump list.
+
+For more information, read
+
+    :help 03.10
+    :help mark-motions
+    :help jump-motions
