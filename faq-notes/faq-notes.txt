@@ -203,3 +203,120 @@ For more information, read
     :help 03.10
     :help mark-motions
     :help jump-motions
+
+------------------------------------------------------------
+
+11.2. How do I enter a carriage return character in a search pattern?
+
+You can either use '\r' or <CTRL-V><CTRL-M> to enter a carriage return
+character in a pattern. In Vim scripts, it is better to use '\r' for the
+carriage return character.
+
+For more information, read
+
+    :help sub-replace-special
+
+
+11.3. How do I search for the character ^M?
+
+You can enter the ^M character in a search command by first pressing the
+CTRL-V key and then pressing the CTRL-M key.
+
+    /^V^M
+
+You can also use the "\r" character. In Vim scripts, "\r" is preferred.
+
+For more information, read
+
+    :help c_CTRL-V
+    :help using_CTRL-V
+    :help /\r
+
+------------------------------------------------------------
+
+11.4. How can I search/replace characters that display as '~R', '~S', etc.?
+
+You can use the 'ga' command to display the ASCII value/code for the
+special character. For example, let us say the ASCII value is 142. Then you
+can use the following command to search for the special character:
+
+    /^V142
+
+where, ^V is entered by pressing CTRL-V.
+
+For more information, read
+
+    :help ga
+    :help using_CTRL_V
+    :help 24.8
+
+------------------------------------------------------------
+
+11.14. How do I search and replace a string in multiple files?
+
+You can use the 'argdo' or 'bufdo' or 'windo' commands to execute an ex
+command on multiple files. For example:
+
+    :argdo %s/foo/bar/g
+
+For more information, read
+
+    :help :argdo
+    :help :bufdo
+    :help :windo
+
+------------------------------------------------------------
+
+11.18. How do I search for a character by its ASCII value?
+
+You can search for a character by its ASCII value by pressing CTRL-V
+followed by the decimal or hexadecimal or octal value of that character in
+the search "/" command.  To determine the ASCII value of a character you
+can use the ":ascii" or the "ga" command.
+
+For more information, read
+
+    :help i_CTRL-V_digit
+    :help :ascii
+    :help ga
+
+------------------------------------------------------------
+
+If you also want the corresponding line numbers, then you can use the
+following command:
+
+    :g/<pattern>/#
+
+------------------------------------------------------------
+
+11.21. How do I search for a text string that spans multiple lines?
+
+You can search for a text string that spans multiple lines using the \_x
+regular expression atom. For example, to search for the text string "Hello
+World", you can use the following search command:
+
+    /Hello\_sWorld
+
+This will match the word "Hello" followed by a newline character and then
+the word "World" at the beginning of the next line. This will also match
+the word "Hello" immediately followed by a space character and then the
+word "World". When searching for the "Hello World" string, to include the
+space characters at the end and beginning of the line, you can use the
+following search command:
+
+    /Hello\_s\+World
+
+For more information, read
+
+    :help 27.8
+    :help pattern-atoms
+    :help /\_
+    :help pattern-searches
+
+------------------------------------------------------------
+
+In normal mode, you can use the ":put <register>" command to insert the
+contents of <register>. For example, use the ":put d" command to insert
+the contents of register "d" into the current buffer.
+
+== Reached section 12. ==
