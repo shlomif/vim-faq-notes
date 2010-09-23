@@ -319,4 +319,136 @@ In normal mode, you can use the ":put <register>" command to insert the
 contents of <register>. For example, use the ":put d" command to insert
 the contents of register "d" into the current buffer.
 
-== Reached section 12. ==
+------------------------------------------------------------
+
+13.3. I am using CTRL-P/CTRL-N to complete words in insert mode. How do I
+      complete words that occur after the just completed word?
+
+You can use CTRL-X CTRL-N and CTRL-X CTRL-P keys to complete words that are
+present after the just completed word.
+
+For more information, read
+
+    :help i_CTRL-X_CTRL-P
+    :help i_CTRL-X_CTRL-N
+    :help ins-completion
+
+------------------------------------------------------------
+
+14.5. How do I indent lines in insert mode?
+
+In insert mode, you can press the CTRL-T key to insert one shiftwidth of
+indent at the start of the current line. In insert mode, you can use the
+CTRL-D key to delete on shiftwidth of indent at the start of the current
+line. You can also use the CTRL-O >> and CTRL-O << commands to indent the
+current line in insert mode.
+
+For more information, read
+
+    :help i_CTRL-T
+    :help i_CTRL-D
+    :help i_0_CTRL-D
+    :help i_CTRL-O
+    :help >
+    :help <<
+
+------------------------------------------------------------
+
+15.3. How do I apply an ex-command on a set of visually selected lines?
+
+When you select a range of lines in visual mode, the < register is set to
+the start of the visual region and the > register is set to the end of the
+visual region. You can use these registers to specify the range for an ex
+command. After visually selecting the lines, press ":" to go to the command
+mode.  Vim will automatically insert the visual range '<,'>. You can run
+any ex-command on the visual range.
+
+For more information, read
+
+    :help v_:
+    :help '<
+    :help '
+
+------------------------------------------------------------
+
+15.6. When I visually select a set of lines and press the > key to indent
+      the selected lines, the visual mode ends. How can I reselect the
+      region for further operation?  (or) How do I re-select the last
+      selected visual area again?
+
+You can use the 'gv' command to reselect the last selected visual area. You
+can also use the marks '< and '> to jump to the beginning or the end of the
+last selected visual area.
+
+For more information, read
+
+    :help gv
+    :help '<
+    :help '
+
+------------------------------------------------------------
+
+16.4. How do I copy the output from an ex-command into a buffer?
+
+To copy the output from an ex-command into a buffer, you have to first get
+the command output into a register. You can use the ":redir" command to get
+the output into a register. For example,
+
+    :redir @a
+    :g/HelloWord/p
+    :redir END
+
+Now the register 'a' will contain the output from the ex command
+"g/HelloWord/p". Now you can paste the contents of the register 'a' into a
+buffer. You can also send or append the output of an ex-command into a file
+using the 'redir' command.
+
+You can prefix the ":global" command with ":silent", to avoid having the
+lines printed to the screen.
+
+To redirect the output from an ex-command to a file, you can use the
+following set of commands:
+
+    :redir > myfile
+    :g/HelloWord/p
+    :redir END
+
+For more information, read
+
+    :help :redir
+    :help :silent
+
+------------------------------------------------------------
+
+16.5. When I press the tab key to complete the name of a file in the
+      command mode, if there are more than one matching file names, then
+      Vim completes the first matching file name and displays a list of all
+      matching filenames. How do I configure Vim to only display the list
+      of all the matching filenames and not complete the first one?
+
+You can modify the 'wildmode' option to configure the way Vim completes
+filenames in the command mode. In this case, you can set the 'wildmode'
+option to 'list':
+
+    :set wildmode=list
+
+For more information, read
+
+    :help 'wildmode'
+
+------------------------------------------------------------
+
+16.8. How do I increase the height of the command-line?
+
+You can increase the height of the command-line by changing the 'cmdheight'
+option:
+
+    :set cmdheight=2
+
+For more information, read
+
+    :help 'cmdheight'
+    :help hit-enter
+    :help 05.7
+
+== Reached section 18 ==
