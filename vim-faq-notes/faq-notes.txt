@@ -502,6 +502,90 @@ For more information, read
     :help <<
     :help <LT>
 
+------------------------------------------------------------
 
-== Reached the beginning of section 21 ==
+21.3. When my abbreviations are expanded, an additional space character is
+      added at the end of the expanded text. How do I avoid this character?
+
+To avoid an additional space character at the end of the expanded text, you
+can expand the abbreviation by pressing the CTRL-] key.  The abbreviation
+will be expanded without adding a space character at the end.
+
+Another alternative is to use the following function and command:
+
+function! Eatchar(pat)
+    let c = nr2char(getchar())
+    return (c =~ a:pat) ? '' : c
+endfunction
+command! -nargs=+ Iabbr execute "iabbr" <q-args> . "<C-R>=Eatchar('\\s')<CR>"
+
+Now, define your abbreviations using the new "Iabbr" command instead of the
+builtin "iabbrev" command. With this command, after expanding the
+abbreviated text, the next typed space character will be discarded.
+
+------------------------------------------------------------
+
+21.4. How do I insert the current date/time stamp into the file?
+
+You can use the strftime() function to insert the current data/time stamp
+in a file. For example, you can use the following abbreviation:
+
+    iabbrev dts <C-R>=strftime("%y/%m/%d %H:%M")<CR>
+
+With this abbreviation, when you type dts in insert mode, it will be
+expanded to the date/time stamp.
+
+Some other forms of the above abbreviation are listed below:
+
+    iabbrev mdyl <C-R>=strftime("%a %d %b %Y")<CR>
+    iabbrev mdys <C-R>=strftime("%y%m%d")<CR>
+    iabbrev mdyc <C-R>=strftime("%c")<CR>
+    iabbrev hml  <C-R>=strftime("%d/%m/%y %H:%M:%S")<CR>
+    iabbrev hms  <C-R>=strftime("%H:%M:%S")<CR>
+
+For more information, read
+
+    :help strftime()
+    :help i_CTRL-R
+
+------------------------------------------------------------
+
+21.5. How do I prevent an abbreviation from expanding in insert mode?
+
+You can prevent an abbreviation from expanding in insert mode by typing
+CTRL-V before the character after the abrreviated word.
+
+For more information, read
+
+    :help abbreviations
+
+------------------------------------------------------------
+22.2. How I record and repeat a set of key sequences?
+
+You can use the 'q' command in normal mode to record a set of key sequences
+and store it in a register. For example, in the normal mode you can press q
+followed by a register name {0-9a-bA-Z"} to start the recording.  To
+end/stop the recording press q again. You can playback/repeat the recorded
+key sequences by pressing @ followed by the register name. e.g. @a.
+
+Another approach is to start Vim with the "-w" command-line argument.
+
+    $ vim -w <file_name>
+
+Vim will record all the characters typed in the session in the
+specified file "file_name". You can use the recorded file with the "-s"
+command line argument to play it back:
+
+    $ vim -s <file_name>
+
+For more information, read
+
+    :help 10.1
+    :help recording
+    :help -w
+    :help -s
+
+------------------------------------------------------------
+
+== Reached the beginning of section 23 ==
 
