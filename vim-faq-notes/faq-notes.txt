@@ -25,7 +25,7 @@ You can use the following command to change the current directory to the
 directory of the current file:
 
     :cd %:p:h
-    
+
 ------------------------------------------------------------
 
 5.7. How do I edit a file whose name is under the cursor?
@@ -451,4 +451,57 @@ For more information, read
     :help hit-enter
     :help 05.7
 
-== Reached section 18 ==
+------------------------------------------------------------
+
+19.8. How do I display (view) all the invisible characters in a file?
+
+You can set the 'list' option to see all the invisible characters in your
+file.
+
+    :set list
+
+With this option set, you can view space characters, tabs, newlines,
+trailing space characters and wrapped lines.
+
+You can modify the 'listchars' option to configure how the invisible
+characters are displayed. For example, with the following command all the
+trailing space characters will be displayed with a '.' character.
+
+    :set listchars=trail:.
+
+For more information, read
+
+    :help 'listchars'
+    :help 'list'
+
+------------------------------------------------------------
+
+20.10. I want to use the Tab key to indent a block of text and Shift-Tab
+       key to unindent a block of text. How do I map the keys to do this?
+       This behavior is similar to textpad, visual studio, etc.
+
+Use the following mapping:
+
+    :inoremap <S-Tab> <C-O><LT><LT>
+    :nnoremap <Tab> >>
+    :nnoremap <S-Tab> <LT><LT>
+    :vnoremap <Tab> >
+    :vnoremap <S-Tab> <LT>
+
+Note that, the <S-Tab> mapping will work only if Vim receives the correct
+key sequence. This is mostly the case with GUI Vim.
+
+For more information, read
+
+    :help :inoremap
+    :help :nnoremap
+    :help :vnoremap
+    :help <S-Tab>
+    :help i_CTRL-O
+    :help >
+    :help <<
+    :help <LT>
+
+
+== Reached the beginning of section 21 ==
+
