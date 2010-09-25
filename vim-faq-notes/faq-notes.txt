@@ -587,5 +587,5 @@ For more information, read
 
 ------------------------------------------------------------
 
-== Reached the beginning of section 23 ==
+== Reached the beginning of section 24.1 ==
 
