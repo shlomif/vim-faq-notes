@@ -587,5 +587,92 @@ For more information, read
 
 ------------------------------------------------------------
 
-== Reached the beginning of section 24.1 ==
+25.2. How do I debug Vim scripts?
+
+Vim has built-in support for a primitive debugger to debug Vim plugins and
+scripts. Using this debugger you can set breakpoints and step through the
+plugin functions.
+
+For more information, read
+
+    :help debug-scripts
+    :help -D
+
+------------------------------------------------------------
+
+25.3. How do I locate the script/plugin which sets a Vim option?
+
+You can use the ":verbose" command to locate the plugin/script which last
+modified a Vim option. For example:
+
+    :verbose set textwidth?
+
+For more information, read
+
+    :help :set-verbose
+    :help :verbose
+
+
+------------------------------------------------------------
+
+25.4. I am getting some error/informational messages from Vim (possibly
+      when running a script), the messages are cleared immediately. How do
+      I display the messages again?
+
+You can use the ":messages" command to display the previous messages.
+
+    :messages
+
+For more information, read
+
+    :help :messages
+    :help :echoerr
+    :help :echomsg
+    :help message-history
+
+------------------------------------------------------------
+
+25.5. How do I save and restore a plugin specific information across Vim
+      invocations?
+
+Vim will save and restore global variables that start with an uppercase
+letter and don't contain a lower case letter. For this to work, the
+'viminfo' option must contain the '!' flag. Vim will store the variables in
+the viminfo file.
+
+For more information, read
+
+    :help 'viminfo'
+    :help viminfo-file
+    :help variables
+
+------------------------------------------------------------
+
+25.6. How do I start insert mode from a Vim function?
+
+You can use the ":startinsert" command to start the insert mode from inside
+a Vim function.
+
+For more information, read
+
+    :help :startinsert
+
+------------------------------------------------------------
+
+25.11. I am using some normal mode commands in my Vim script. How do I
+       avoid using the user-defined mappings for these normal mode commands
+       and use the standard Vim functionality for these normal mode
+       commands?
+
+You can use the "normal!" command in your script to invoke a normal-mode
+command. This will use the standard functionality of the normal mode
+command and will not use the user-defined mapping.
+
+For more information, read
+
+    :help :normal
+
+------------------------------------------------------------
+
+== Reached the beginning of section 26.1 ==
 
