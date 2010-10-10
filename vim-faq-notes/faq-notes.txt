@@ -674,5 +674,81 @@ For more information, read
 
 ------------------------------------------------------------
 
-== Reached the beginning of section 26.1 ==
+26.4. How do I turn off loading the Vim plugins?
 
+You can reset the 'loadplugins' option to turn off loading the plugins:
+
+    :set noloadplugins
+
+You can also specify the "--noplugin" command line argument to stop loading
+the plugins:
+
+    $ vim --noplugin
+
+For more information, read
+
+    :help 'loadplugins'
+    :help --noplugin
+    :help load-plugins
+
+27.2. How do I configure the indentation used for C/C++ files?
+
+You can configure the Vim C indentation by modifying the value of the
+'cinoptions', 'cinkeys' and 'cinwords' options.
+
+For more information, read
+
+    :help 'cindent'
+    :help 'cinoptions'
+    :help 'cinkeys'
+    :help 'cinwords'
+    :help C-indenting
+    :help cinoptions-values
+    :help 'smartindent'
+
+27.5. I am editing a C program using Vim. How do I display the definition
+      of a macro or a variable?
+
+You can use the [d command to display the definition of a macro and the [i
+command to display the definition of a variable.
+
+For more information, read
+
+    :help [d
+    :help [i
+    :help include-search
+    :help 29.4
+    :help 29.5
+
+27.9. How do I edit a header file with the same name as the corresponding C
+      source file?
+
+You can use the following command to edit a header file with the same name
+as the corresponding C source file:
+
+    :e %:t:r.h
+
+You can use the following command to edit the file in a new split window:
+
+    :sp %:t:r.h
+
+In the above commands, the percent sign expands to the name of the current
+file.  The ":t" modifier extracts the tail (last component) of the
+filename. The ":r" modifier extracts the root of the filename.  The .h is
+appended to the resulting name to get the header filename.
+
+Another approach is to use the following command:
+
+    :sfind %:t:r.h
+
+This command will search for the header file in the directories specified
+in the 'path' option.
+
+For more information, read
+
+    :help cmdline-special
+    :help filename-modifiers
+    :help :sfind
+    :help 'path'
+
+== Reached the beginning of section 28.1 ==
