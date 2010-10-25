@@ -751,4 +751,51 @@ For more information, read
     :help :sfind
     :help 'path'
 
-== Reached the beginning of section 28.1 ==
+30.2. How do I pass the word under the cursor to an external command?
+
+You can use the special keyword <cword> to pass the word under the cursor
+to an external command. For example:
+
+    :!dict <cword>
+
+For more information, read
+
+    :help <cword>
+
+30.4.
+
+Also, if you want to pipe a buffer to an external command but not put the
+results back in the buffer, you can use
+
+    :w !sort
+
+31.1. How do I create buffer specific menus?
+
+Adding support for buffer specific menus is in the Vim TODO list. In the
+mean time, you can try Michael Geddes's plugin, buffermenu.vim:
+
+    http://vim.sourceforge.net/scripts/script.php?script_id=246
+
+31.4. How do I add a horizontal scrollbar in GVim?
+
+You can enable the horizontal scrollbar by modifying the 'guioptions'
+option:
+
+    :set guioptions+=b
+
+For more information, read
+
+    :help 'guioptions'
+    :help gui-horiz-scroll
+
+36.3. How do I display the ascii value of a character displayed in a
+      buffer?
+
+You can use the 'ga' command to display the ascii value of a displayed
+character.
+
+For more information, read
+
+    :help ga
+    :help :ascii
+
