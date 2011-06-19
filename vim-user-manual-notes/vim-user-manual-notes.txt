@@ -1,0 +1,13 @@
+usr_03.txt :
+
+* ';' repeats the last f/F/t/T command. ',' does it in the opposite direction
+
+* CTRL-B/CTRL-F/CTRL-Y/CTRL-E/CTRL-U/CTRL-D - scroll the screen.
+
+* zt - position the line at the beginning of the window.
+    - zz - middle.
+    - zb - bottom.
+
+* `` jump to last place.
+
+* CTRL-O / CTRL-I - older/newer positions.
