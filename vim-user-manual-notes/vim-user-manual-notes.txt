@@ -1,4 +1,5 @@
 usr_03.txt :
+============
 
 * ';' repeats the last f/F/t/T command. ',' does it in the opposite direction
 
@@ -11,3 +12,29 @@ usr_03.txt :
 * `` jump to last place.
 
 * CTRL-O / CTRL-I - older/newer positions.
+
+usr_07.txt :
+============
+
+* If you want to edit another file, but not write the changes in the current
+file yet, you can make it hidden: >
+
+	:hide edit foo.txt
+
+The text with changes is still there, but you can't see it.  This is further
+explained in section |22.4|: The buffer list.
+
+* :next and :previous to move to different files.
+
+After jumping to another file, you can use two predefined marks which are very
+useful: >
+
+	`"
+
+This takes you to the position where the cursor was when you left the file.
+Another mark that is remembered is the position where you made the last
+change: >
+
+	`.
+
+
