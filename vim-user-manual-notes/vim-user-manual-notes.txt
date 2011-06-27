@@ -37,4 +37,12 @@ change: >
 
 	`.
 
+usr_10.txt :
+============
+
+* :w !wc
+
+Write the file to a program and display its output.
+
+Be careful from :write! wc
 
