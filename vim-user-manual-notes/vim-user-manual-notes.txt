@@ -46,3 +46,20 @@ Write the file to a program and display its output.
 
 Be careful from :write! wc
 
+usr_24.txt :
+============
+
+* Ctrl+U in insert mode deletes to the beginning of the line (like in Bash).
+
+* Ctrl+A in insert mode inserts the text of the previous insert.
+
+* Ctrl+@ does a Ctrl+A and then exits insert mode.
+
+* Ctrl+Y inserts the character above the cursor.
+
+* Ctrl+E inserts the character below the cursor.
+
+* CTRL-R CTRL-R {register}.
+
+* Ctrl+O executes a single normal mode command in insert mode and exits.
+
