@@ -63,3 +63,41 @@ usr_24.txt :
 
 * Ctrl+O executes a single normal mode command in insert mode and exits.
 
+usr_25.txt :
+============
+
+* :set textwidth=30 - breaks line after a while.
+
+* see :help auto-format .
+
+* <<<<
+Vim is able to format more than just plain text.  See |fo-table| for how to
+change this.  See the 'joinspaces' option to change the number of spaces used
+after a full stop.
+   It is possible to use an external program for formatting.  This is useful
+if your text can't be properly formatted with Vim's builtin command.  See the
+'formatprg' option.
+>>>
+
+* :{range}center [width] - to center a text.
+
+* :right
+
+* :left
+
+* Justify a text using 
+
+
+<<<
+	:runtime macros/justify.vim
+
+This Vim script file defines a new visual command "_j".  To justify a block of
+text, highlight the text in Visual mode and then execute "_j".
+   Look in the file for more explanations.  To go there, do "gf" on this name:
+$VIMRUNTIME/macros/justify.vim.
+
+>>>
+
+* 	:g/./,/^$/join
+
+*
