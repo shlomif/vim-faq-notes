@@ -79,6 +79,7 @@ if your text can't be properly formatted with Vim's builtin command.  See the
 'formatprg' option.
 >>>
 
+
 * :{range}center [width] - to center a text.
 
 * :right
@@ -101,3 +102,15 @@ $VIMRUNTIME/macros/justify.vim.
 * 	:g/./,/^$/join
 
 *
+
+usr_27.txt :
+============
+
+* Offsets - /default/2 - second line past the pattern.
+
+* /const/e
+
+* /const/e+1
+
+* /const/e-1
+
