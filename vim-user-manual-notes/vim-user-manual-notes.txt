@@ -114,3 +114,11 @@ usr_27.txt :
 
 * /const/e-1
 
+usr_28.txt :
+============
+
+* zf creates a fold. (= fold).
+
+* zo opens the fold.
+
+* zc closes the fold.
