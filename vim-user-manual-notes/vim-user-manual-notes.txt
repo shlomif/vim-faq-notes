@@ -122,3 +122,38 @@ usr_28.txt :
 * zo opens the fold.
 
 * zc closes the fold.
+
+usr_29.txt :
+============
+
+* :tags shows the list of tags that were traversed.
+
+* :tag goes to the tag on top of the list.
+
+* :stag - split tag.
+
+* :tnext - jump to the other matches for the same tag.
+
+* :tselect tagname - select.
+
+* tags accept regular expression using a leading "/".
+
+* :ptag or Ctrl+W } - preview the tag in a separate window.
+
+* :pclose
+
+* :pedit defs.h
+
+* :psearch popen
+
+* [# - jump to the start of #if .. #endif.
+
+* ]# - next #else or #endif.
+
+* [m - inside C++/Java - method.
+
+* [( ]) - work on () pairs.
+
+* [/ - start/end of comments.
+
+* [I - how the variable was declared.
