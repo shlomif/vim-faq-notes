@@ -157,3 +157,12 @@ usr_29.txt :
 * [/ - start/end of comments.
 
 * [I - how the variable was declared.
+
+usr_30.txt :
+============
+
+* To see the whole message in quickfix do :cc.
+
+* :colder and :cnewer to go forward/backward to an error list.
+
+* cinoptions to customise the C style.
