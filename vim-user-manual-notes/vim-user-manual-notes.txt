@@ -86,7 +86,7 @@ if your text can't be properly formatted with Vim's builtin command.  See the
 
 * :left
 
-* Justify a text using 
+* Justify a text using
 
 
 <<<
