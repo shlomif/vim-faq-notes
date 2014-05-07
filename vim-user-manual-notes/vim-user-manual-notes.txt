@@ -19,7 +19,7 @@ usr_07.txt :
 * If you want to edit another file, but not write the changes in the current
 file yet, you can make it hidden: >
 
-	:hide edit foo.txt
+    :hide edit foo.txt
 
 The text with changes is still there, but you can't see it.  This is further
 explained in section |22.4|: The buffer list.
@@ -29,13 +29,13 @@ explained in section |22.4|: The buffer list.
 After jumping to another file, you can use two predefined marks which are very
 useful: >
 
-	`"
+    `"
 
 This takes you to the position where the cursor was when you left the file.
 Another mark that is remembered is the position where you made the last
 change: >
 
-	`.
+    `.
 
 usr_10.txt :
 ============
@@ -90,7 +90,7 @@ if your text can't be properly formatted with Vim's builtin command.  See the
 
 
 <<<
-	:runtime macros/justify.vim
+    :runtime macros/justify.vim
 
 This Vim script file defines a new visual command "_j".  To justify a block of
 text, highlight the text in Visual mode and then execute "_j".
@@ -99,7 +99,7 @@ $VIMRUNTIME/macros/justify.vim.
 
 >>>
 
-* 	:g/./,/^$/join
+*   :g/./,/^$/join
 
 *
 
