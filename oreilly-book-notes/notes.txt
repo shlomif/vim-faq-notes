@@ -1,0 +1,4 @@
+~ will change the case of letters on the same line (and advance to the next
+character).
+
+U restores a line to its pristine state.
