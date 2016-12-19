@@ -2,3 +2,7 @@
 character).
 
 U restores a line to its pristine state.
+
+count% goes to the "count"th percentage of the file.
+
+:go n goes to the "n"th character in the buffer.
